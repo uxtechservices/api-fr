@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const secretKey = process.env.JWT_SECRET || 'your-secret-key'; // Use a strong, random secret in production
+const secretKey = process.env.JWT_SECRET || 'FR73383993838JWT'; // Use a strong, random secret in production
 
 const authenticateToken = (req, res, next) => {
   const authHeader = req.headers['authorization'];
