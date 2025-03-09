@@ -4,10 +4,10 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const dbConfig = {
-  host: process.env.DB_HOST || 'bamp1asmfigbudn1ho3t-mysql.services.clever-cloud.com',
-  user: process.env.DB_USER || 'uxalmi1skg5dihhz',
-  password: process.env.DB_PASSWORD || 'EDsZ9kI5O70IuBCRnyyi',
-  database: process.env.DB_NAME || 'bamp1asmfigbudn1ho3t',
+  host: process.env.DB_HOST || 'bwsfivbl4xcwgyl4es0c-mysql.services.clever-cloud.com',
+  user: process.env.DB_USER || 'usawkbcygcfr3be7',
+  password: process.env.DB_PASSWORD || 'kRagKo4lVSNNvdHP55i6',
+  database: process.env.DB_NAME || 'bwsfivbl4xcwgyl4es0c',
   port: process.env.DB_PORT || 3306,
   waitForConnections: true,
   connectionLimit: 10,
