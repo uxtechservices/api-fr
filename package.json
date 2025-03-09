@@ -1,0 +1,26 @@
+{
+  "name": "node-express-api",
+  "description": "Simple api sample in Node",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+  "author": "Google LLC",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.1",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
