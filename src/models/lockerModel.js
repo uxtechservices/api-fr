@@ -79,17 +79,22 @@ const createDatabase = async () => {
       }
   };
 
-  const createLocker = async (lockerNumber) => {
-    try {
-      const connection = await pool.getConnection();
-      const [result] = await connection.query('INSERT INTO lockers (locker_number) VALUES (?)', [lockerNumber]);
-      connection.release();
-      return { locker_id: result.insertId, locker_number };
-    } catch (error) {
-      console.error('Error creating locker:', error);
-      throw error;
-    }
-  };
+    const createLocker = async (lockerNumber) => {
+      try {
+        const connection = await pool.getConnection();
+        console.log(`Model - createLocker - Creando locker con locker_number: ${lockerNumber}`); // Log
+        const [result] = await connection.query('INSERT INTO lockers (locker_number) VALUES (?)', [lockerNumber]);
+        console.log(`Model - createLocker - Resultado de la query:`, result); // Log
+        connection.release();
+    
+        const newLocker = { locker_id: result.insertId, locker_number: lockerNumber }; // Corregido
+        console.log(`Model - createLocker - Retornando:`, newLocker); // Log
+        return newLocker;
+      } catch (error) {
+        console.error('Model - createLocker - Error:', error); // Imprime el error completo
+        throw error; // Lanza el error para que el controlador lo capture
+      }
+    };
 
   const updateLocker = async (lockerId, updatedLocker) => {
     try {
